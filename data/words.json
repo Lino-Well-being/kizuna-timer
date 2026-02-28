@@ -1,0 +1,2448 @@
+{
+  "words": [
+    {
+      "id": 1,
+      "english": "Dog",
+      "japanese": "犬",
+      "category": "animals",
+      "emoji": "🐶",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a dog.",
+          "japanese": "これは犬です。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a dog.",
+          "japanese": "犬が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like dogs.",
+          "japanese": "犬が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "english": "Cat",
+      "japanese": "猫",
+      "category": "animals",
+      "emoji": "🐱",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a cat.",
+          "japanese": "これは猫です。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a cat.",
+          "japanese": "猫が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like cats.",
+          "japanese": "猫が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "english": "Bird",
+      "japanese": "鳥",
+      "category": "animals",
+      "emoji": "🐦",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a bird.",
+          "japanese": "これは鳥です。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a bird.",
+          "japanese": "鳥が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like birds.",
+          "japanese": "鳥が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "english": "Fish",
+      "japanese": "魚",
+      "category": "animals",
+      "emoji": "🐟",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a fish.",
+          "japanese": "これは魚です。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a fish.",
+          "japanese": "魚が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like fish.",
+          "japanese": "魚が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "english": "Lion",
+      "japanese": "ライオン",
+      "category": "animals",
+      "emoji": "🦁",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a lion.",
+          "japanese": "これはライオンです。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a lion.",
+          "japanese": "ライオンが見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like lions.",
+          "japanese": "ライオンが好きです。"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "english": "Elephant",
+      "japanese": "象",
+      "category": "animals",
+      "emoji": "🐘",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is an elephant.",
+          "japanese": "これは象です。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see an elephant.",
+          "japanese": "象が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like elephants.",
+          "japanese": "象が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "english": "Rabbit",
+      "japanese": "うさぎ",
+      "category": "animals",
+      "emoji": "🐰",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a rabbit.",
+          "japanese": "これはうさぎです。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a rabbit.",
+          "japanese": "うさぎが見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like rabbits.",
+          "japanese": "うさぎが好きです。"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "english": "Bear",
+      "japanese": "熊",
+      "category": "animals",
+      "emoji": "🐻",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a bear.",
+          "japanese": "これは熊です。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a bear.",
+          "japanese": "熊が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like bears.",
+          "japanese": "熊が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "english": "Monkey",
+      "japanese": "猿",
+      "category": "animals",
+      "emoji": "🐵",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a monkey.",
+          "japanese": "これは猿です。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a monkey.",
+          "japanese": "猿が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like monkeys.",
+          "japanese": "猿が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "english": "Tiger",
+      "japanese": "虎",
+      "category": "animals",
+      "emoji": "🐯",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a tiger.",
+          "japanese": "これは虎です。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a tiger.",
+          "japanese": "虎が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like tigers.",
+          "japanese": "虎が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "english": "Pig",
+      "japanese": "豚",
+      "category": "animals",
+      "emoji": "🐷",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a pig.",
+          "japanese": "これは豚です。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a pig.",
+          "japanese": "豚が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like pigs.",
+          "japanese": "豚が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "english": "Cow",
+      "japanese": "牛",
+      "category": "animals",
+      "emoji": "🐮",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a cow.",
+          "japanese": "これは牛です。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a cow.",
+          "japanese": "牛が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like cows.",
+          "japanese": "牛が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "english": "Horse",
+      "japanese": "馬",
+      "category": "animals",
+      "emoji": "🐴",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a horse.",
+          "japanese": "これは馬です。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a horse.",
+          "japanese": "馬が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like horses.",
+          "japanese": "馬が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "english": "Sheep",
+      "japanese": "羊",
+      "category": "animals",
+      "emoji": "🐑",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a sheep.",
+          "japanese": "これは羊です。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a sheep.",
+          "japanese": "羊が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like sheep.",
+          "japanese": "羊が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "english": "Duck",
+      "japanese": "アヒル",
+      "category": "animals",
+      "emoji": "🦆",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a duck.",
+          "japanese": "これはアヒルです。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a duck.",
+          "japanese": "アヒルが見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like ducks.",
+          "japanese": "アヒルが好きです。"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "english": "Chicken",
+      "japanese": "鶏",
+      "category": "animals",
+      "emoji": "🐔",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a chicken.",
+          "japanese": "これは鶏です。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a chicken.",
+          "japanese": "鶏が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like chickens.",
+          "japanese": "鶏が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "english": "Frog",
+      "japanese": "カエル",
+      "category": "animals",
+      "emoji": "🐸",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a frog.",
+          "japanese": "これはカエルです。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a frog.",
+          "japanese": "カエルが見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like frogs.",
+          "japanese": "カエルが好きです。"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "english": "Turtle",
+      "japanese": "亀",
+      "category": "animals",
+      "emoji": "🐢",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a turtle.",
+          "japanese": "これは亀です。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a turtle.",
+          "japanese": "亀が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like turtles.",
+          "japanese": "亀が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "english": "Snake",
+      "japanese": "蛇",
+      "category": "animals",
+      "emoji": "🐍",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a snake.",
+          "japanese": "これは蛇です。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a snake.",
+          "japanese": "蛇が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like snakes.",
+          "japanese": "蛇が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "english": "Mouse",
+      "japanese": "ネズミ",
+      "category": "animals",
+      "emoji": "🐭",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a mouse.",
+          "japanese": "これはネズミです。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a mouse.",
+          "japanese": "ネズミが見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like mice.",
+          "japanese": "ネズミが好きです。"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "english": "Apple",
+      "japanese": "りんご",
+      "category": "food",
+      "emoji": "🍎",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is an apple.",
+          "japanese": "これはりんごです。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see an apple.",
+          "japanese": "りんごが見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like apples.",
+          "japanese": "りんごが好きです。"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "english": "Banana",
+      "japanese": "バナナ",
+      "category": "food",
+      "emoji": "🍌",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a banana.",
+          "japanese": "これはバナナです。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a banana.",
+          "japanese": "バナナが見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like bananas.",
+          "japanese": "バナナが好きです。"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "english": "Orange",
+      "japanese": "オレンジ",
+      "category": "food",
+      "emoji": "🍊",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is an orange.",
+          "japanese": "これはオレンジです。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see an orange.",
+          "japanese": "オレンジが見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like oranges.",
+          "japanese": "オレンジが好きです。"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "english": "Milk",
+      "japanese": "牛乳",
+      "category": "food",
+      "emoji": "🥛",
+      "sentences": [
+        {
+          "pattern": "This is ___",
+          "english": "This is milk.",
+          "japanese": "これは牛乳です。"
+        },
+        {
+          "pattern": "I see ___",
+          "english": "I see milk.",
+          "japanese": "牛乳が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like milk.",
+          "japanese": "牛乳が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "english": "Bread",
+      "japanese": "パン",
+      "category": "food",
+      "emoji": "🍞",
+      "sentences": [
+        {
+          "pattern": "This is ___",
+          "english": "This is bread.",
+          "japanese": "これはパンです。"
+        },
+        {
+          "pattern": "I see ___",
+          "english": "I see bread.",
+          "japanese": "パンが見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like bread.",
+          "japanese": "パンが好きです。"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "english": "Rice",
+      "japanese": "ごはん",
+      "category": "food",
+      "emoji": "🍚",
+      "sentences": [
+        {
+          "pattern": "This is ___",
+          "english": "This is rice.",
+          "japanese": "これはごはんです。"
+        },
+        {
+          "pattern": "I see ___",
+          "english": "I see rice.",
+          "japanese": "ごはんが見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like rice.",
+          "japanese": "ごはんが好きです。"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "english": "Egg",
+      "japanese": "卵",
+      "category": "food",
+      "emoji": "🥚",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is an egg.",
+          "japanese": "これは卵です。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see an egg.",
+          "japanese": "卵が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like eggs.",
+          "japanese": "卵が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "english": "Cheese",
+      "japanese": "チーズ",
+      "category": "food",
+      "emoji": "🧀",
+      "sentences": [
+        {
+          "pattern": "This is ___",
+          "english": "This is cheese.",
+          "japanese": "これはチーズです。"
+        },
+        {
+          "pattern": "I see ___",
+          "english": "I see cheese.",
+          "japanese": "チーズが見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like cheese.",
+          "japanese": "チーズが好きです。"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "english": "Water",
+      "japanese": "水",
+      "category": "food",
+      "emoji": "💧",
+      "sentences": [
+        {
+          "pattern": "This is ___",
+          "english": "This is water.",
+          "japanese": "これは水です。"
+        },
+        {
+          "pattern": "I see ___",
+          "english": "I see water.",
+          "japanese": "水が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like water.",
+          "japanese": "水が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "english": "Juice",
+      "japanese": "ジュース",
+      "category": "food",
+      "emoji": "🧃",
+      "sentences": [
+        {
+          "pattern": "This is ___",
+          "english": "This is juice.",
+          "japanese": "これはジュースです。"
+        },
+        {
+          "pattern": "I see ___",
+          "english": "I see juice.",
+          "japanese": "ジュースが見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like juice.",
+          "japanese": "ジュースが好きです。"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "english": "Cookie",
+      "japanese": "クッキー",
+      "category": "food",
+      "emoji": "🍪",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a cookie.",
+          "japanese": "これはクッキーです。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a cookie.",
+          "japanese": "クッキーが見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like cookies.",
+          "japanese": "クッキーが好きです。"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "english": "Cake",
+      "japanese": "ケーキ",
+      "category": "food",
+      "emoji": "🍰",
+      "sentences": [
+        {
+          "pattern": "This is ___",
+          "english": "This is cake.",
+          "japanese": "これはケーキです。"
+        },
+        {
+          "pattern": "I see ___",
+          "english": "I see cake.",
+          "japanese": "ケーキが見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like cake.",
+          "japanese": "ケーキが好きです。"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "english": "Carrot",
+      "japanese": "にんじん",
+      "category": "food",
+      "emoji": "🥕",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a carrot.",
+          "japanese": "これはにんじんです。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a carrot.",
+          "japanese": "にんじんが見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like carrots.",
+          "japanese": "にんじんが好きです。"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "english": "Tomato",
+      "japanese": "トマト",
+      "category": "food",
+      "emoji": "🍅",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a tomato.",
+          "japanese": "これはトマトです。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a tomato.",
+          "japanese": "トマトが見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like tomatoes.",
+          "japanese": "トマトが好きです。"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "english": "Potato",
+      "japanese": "じゃがいも",
+      "category": "food",
+      "emoji": "🥔",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a potato.",
+          "japanese": "これはじゃがいもです。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a potato.",
+          "japanese": "じゃがいもが見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like potatoes.",
+          "japanese": "じゃがいもが好きです。"
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "english": "Corn",
+      "japanese": "とうもろこし",
+      "category": "food",
+      "emoji": "🌽",
+      "sentences": [
+        {
+          "pattern": "This is ___",
+          "english": "This is corn.",
+          "japanese": "これはとうもろこしです。"
+        },
+        {
+          "pattern": "I see ___",
+          "english": "I see corn.",
+          "japanese": "とうもろこしが見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like corn.",
+          "japanese": "とうもろこしが好きです。"
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "english": "Meat",
+      "japanese": "肉",
+      "category": "food",
+      "emoji": "🍖",
+      "sentences": [
+        {
+          "pattern": "This is ___",
+          "english": "This is meat.",
+          "japanese": "これは肉です。"
+        },
+        {
+          "pattern": "I see ___",
+          "english": "I see meat.",
+          "japanese": "肉が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like meat.",
+          "japanese": "肉が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "english": "Soup",
+      "japanese": "スープ",
+      "category": "food",
+      "emoji": "🍲",
+      "sentences": [
+        {
+          "pattern": "This is ___",
+          "english": "This is soup.",
+          "japanese": "これはスープです。"
+        },
+        {
+          "pattern": "I see ___",
+          "english": "I see soup.",
+          "japanese": "スープが見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like soup.",
+          "japanese": "スープが好きです。"
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "english": "Noodle",
+      "japanese": "麺",
+      "category": "food",
+      "emoji": "🍜",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a noodle.",
+          "japanese": "これは麺です。"
+        },
+        {
+          "pattern": "I see ___",
+          "english": "I see noodles.",
+          "japanese": "麺が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like noodles.",
+          "japanese": "麺が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "english": "Strawberry",
+      "japanese": "いちご",
+      "category": "food",
+      "emoji": "🍓",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a strawberry.",
+          "japanese": "これはいちごです。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a strawberry.",
+          "japanese": "いちごが見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like strawberries.",
+          "japanese": "いちごが好きです。"
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "english": "Hat",
+      "japanese": "帽子",
+      "category": "things",
+      "emoji": "🎩",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a hat.",
+          "japanese": "これは帽子です。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a hat.",
+          "japanese": "帽子が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like hats.",
+          "japanese": "帽子が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "english": "Shirt",
+      "japanese": "シャツ",
+      "category": "things",
+      "emoji": "👕",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a shirt.",
+          "japanese": "これはシャツです。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a shirt.",
+          "japanese": "シャツが見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like shirts.",
+          "japanese": "シャツが好きです。"
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "english": "Pants",
+      "japanese": "ズボン",
+      "category": "things",
+      "emoji": "👖",
+      "sentences": [
+        {
+          "pattern": "This is ___",
+          "english": "These are pants.",
+          "japanese": "これはズボンです。"
+        },
+        {
+          "pattern": "I see ___",
+          "english": "I see pants.",
+          "japanese": "ズボンが見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like pants.",
+          "japanese": "ズボンが好きです。"
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "english": "Shoes",
+      "japanese": "靴",
+      "category": "things",
+      "emoji": "👟",
+      "sentences": [
+        {
+          "pattern": "This is ___",
+          "english": "These are shoes.",
+          "japanese": "これは靴です。"
+        },
+        {
+          "pattern": "I see ___",
+          "english": "I see shoes.",
+          "japanese": "靴が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like shoes.",
+          "japanese": "靴が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "english": "Bag",
+      "japanese": "カバン",
+      "category": "things",
+      "emoji": "🎒",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a bag.",
+          "japanese": "これはカバンです。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a bag.",
+          "japanese": "カバンが見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like bags.",
+          "japanese": "カバンが好きです。"
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "english": "Book",
+      "japanese": "本",
+      "category": "things",
+      "emoji": "📖",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a book.",
+          "japanese": "これは本です。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a book.",
+          "japanese": "本が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like books.",
+          "japanese": "本が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "english": "Pen",
+      "japanese": "ペン",
+      "category": "things",
+      "emoji": "✏️",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a pen.",
+          "japanese": "これはペンです。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a pen.",
+          "japanese": "ペンが見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like pens.",
+          "japanese": "ペンが好きです。"
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "english": "Ball",
+      "japanese": "ボール",
+      "category": "things",
+      "emoji": "⚽",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a ball.",
+          "japanese": "これはボールです。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a ball.",
+          "japanese": "ボールが見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like balls.",
+          "japanese": "ボールが好きです。"
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "english": "Car",
+      "japanese": "車",
+      "category": "things",
+      "emoji": "🚗",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a car.",
+          "japanese": "これは車です。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a car.",
+          "japanese": "車が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like cars.",
+          "japanese": "車が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "english": "Bus",
+      "japanese": "バス",
+      "category": "things",
+      "emoji": "🚌",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a bus.",
+          "japanese": "これはバスです。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a bus.",
+          "japanese": "バスが見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like buses.",
+          "japanese": "バスが好きです。"
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "english": "Bike",
+      "japanese": "自転車",
+      "category": "things",
+      "emoji": "🚲",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a bike.",
+          "japanese": "これは自転車です。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a bike.",
+          "japanese": "自転車が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like bikes.",
+          "japanese": "自転車が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "english": "Train",
+      "japanese": "電車",
+      "category": "things",
+      "emoji": "🚂",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a train.",
+          "japanese": "これは電車です。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a train.",
+          "japanese": "電車が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like trains.",
+          "japanese": "電車が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "english": "Chair",
+      "japanese": "椅子",
+      "category": "things",
+      "emoji": "🪑",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a chair.",
+          "japanese": "これは椅子です。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a chair.",
+          "japanese": "椅子が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like chairs.",
+          "japanese": "椅子が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "english": "Table",
+      "japanese": "テーブル",
+      "category": "things",
+      "emoji": "🪑",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a table.",
+          "japanese": "これはテーブルです。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a table.",
+          "japanese": "テーブルが見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like tables.",
+          "japanese": "テーブルが好きです。"
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "english": "Bed",
+      "japanese": "ベッド",
+      "category": "things",
+      "emoji": "🛏️",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a bed.",
+          "japanese": "これはベッドです。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a bed.",
+          "japanese": "ベッドが見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like beds.",
+          "japanese": "ベッドが好きです。"
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "english": "Door",
+      "japanese": "ドア",
+      "category": "things",
+      "emoji": "🚪",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a door.",
+          "japanese": "これはドアです。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a door.",
+          "japanese": "ドアが見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like doors.",
+          "japanese": "ドアが好きです。"
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "english": "Cup",
+      "japanese": "コップ",
+      "category": "things",
+      "emoji": "☕",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a cup.",
+          "japanese": "これはコップです。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a cup.",
+          "japanese": "コップが見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like cups.",
+          "japanese": "コップが好きです。"
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "english": "Plate",
+      "japanese": "お皿",
+      "category": "things",
+      "emoji": "🍽️",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a plate.",
+          "japanese": "これはお皿です。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a plate.",
+          "japanese": "お皿が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like plates.",
+          "japanese": "お皿が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 59,
+      "english": "Spoon",
+      "japanese": "スプーン",
+      "category": "things",
+      "emoji": "🥄",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a spoon.",
+          "japanese": "これはスプーンです。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a spoon.",
+          "japanese": "スプーンが見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like spoons.",
+          "japanese": "スプーンが好きです。"
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "english": "Fork",
+      "japanese": "フォーク",
+      "category": "things",
+      "emoji": "🍴",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a fork.",
+          "japanese": "これはフォークです。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a fork.",
+          "japanese": "フォークが見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like forks.",
+          "japanese": "フォークが好きです。"
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "english": "Red",
+      "japanese": "赤",
+      "category": "colors",
+      "emoji": "🔴",
+      "sentences": [
+        {
+          "pattern": "This is ___",
+          "english": "This is red.",
+          "japanese": "これは赤です。"
+        },
+        {
+          "pattern": "I see ___",
+          "english": "I see red.",
+          "japanese": "赤が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like red.",
+          "japanese": "赤が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 62,
+      "english": "Blue",
+      "japanese": "青",
+      "category": "colors",
+      "emoji": "🔵",
+      "sentences": [
+        {
+          "pattern": "This is ___",
+          "english": "This is blue.",
+          "japanese": "これは青です。"
+        },
+        {
+          "pattern": "I see ___",
+          "english": "I see blue.",
+          "japanese": "青が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like blue.",
+          "japanese": "青が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 63,
+      "english": "Yellow",
+      "japanese": "黄色",
+      "category": "colors",
+      "emoji": "🟡",
+      "sentences": [
+        {
+          "pattern": "This is ___",
+          "english": "This is yellow.",
+          "japanese": "これは黄色です。"
+        },
+        {
+          "pattern": "I see ___",
+          "english": "I see yellow.",
+          "japanese": "黄色が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like yellow.",
+          "japanese": "黄色が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 64,
+      "english": "Green",
+      "japanese": "緑",
+      "category": "colors",
+      "emoji": "🟢",
+      "sentences": [
+        {
+          "pattern": "This is ___",
+          "english": "This is green.",
+          "japanese": "これは緑です。"
+        },
+        {
+          "pattern": "I see ___",
+          "english": "I see green.",
+          "japanese": "緑が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like green.",
+          "japanese": "緑が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 65,
+      "english": "White",
+      "japanese": "白",
+      "category": "colors",
+      "emoji": "⚪",
+      "sentences": [
+        {
+          "pattern": "This is ___",
+          "english": "This is white.",
+          "japanese": "これは白です。"
+        },
+        {
+          "pattern": "I see ___",
+          "english": "I see white.",
+          "japanese": "白が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like white.",
+          "japanese": "白が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 66,
+      "english": "Black",
+      "japanese": "黒",
+      "category": "colors",
+      "emoji": "⚫",
+      "sentences": [
+        {
+          "pattern": "This is ___",
+          "english": "This is black.",
+          "japanese": "これは黒です。"
+        },
+        {
+          "pattern": "I see ___",
+          "english": "I see black.",
+          "japanese": "黒が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like black.",
+          "japanese": "黒が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 67,
+      "english": "Circle",
+      "japanese": "丸",
+      "category": "colors",
+      "emoji": "🔵",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a circle.",
+          "japanese": "これは丸です。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a circle.",
+          "japanese": "丸が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like circles.",
+          "japanese": "丸が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 68,
+      "english": "Square",
+      "japanese": "四角",
+      "category": "colors",
+      "emoji": "🟦",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a square.",
+          "japanese": "これは四角です。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a square.",
+          "japanese": "四角が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like squares.",
+          "japanese": "四角が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 69,
+      "english": "Triangle",
+      "japanese": "三角",
+      "category": "colors",
+      "emoji": "🔺",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a triangle.",
+          "japanese": "これは三角です。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a triangle.",
+          "japanese": "三角が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like triangles.",
+          "japanese": "三角が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 70,
+      "english": "Star",
+      "japanese": "星",
+      "category": "colors",
+      "emoji": "⭐",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a star.",
+          "japanese": "これは星です。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a star.",
+          "japanese": "星が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like stars.",
+          "japanese": "星が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 71,
+      "english": "Mom",
+      "japanese": "ママ",
+      "category": "family",
+      "emoji": "👩",
+      "sentences": [
+        {
+          "pattern": "This is ___",
+          "english": "This is mom.",
+          "japanese": "これはママです。"
+        },
+        {
+          "pattern": "I see ___",
+          "english": "I see mom.",
+          "japanese": "ママが見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like mom.",
+          "japanese": "ママが好きです。"
+        }
+      ]
+    },
+    {
+      "id": 72,
+      "english": "Dad",
+      "japanese": "パパ",
+      "category": "family",
+      "emoji": "👨",
+      "sentences": [
+        {
+          "pattern": "This is ___",
+          "english": "This is dad.",
+          "japanese": "これはパパです。"
+        },
+        {
+          "pattern": "I see ___",
+          "english": "I see dad.",
+          "japanese": "パパが見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like dad.",
+          "japanese": "パパが好きです。"
+        }
+      ]
+    },
+    {
+      "id": 73,
+      "english": "Baby",
+      "japanese": "赤ちゃん",
+      "category": "family",
+      "emoji": "👶",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a baby.",
+          "japanese": "これは赤ちゃんです。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a baby.",
+          "japanese": "赤ちゃんが見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like babies.",
+          "japanese": "赤ちゃんが好きです。"
+        }
+      ]
+    },
+    {
+      "id": 74,
+      "english": "Boy",
+      "japanese": "男の子",
+      "category": "family",
+      "emoji": "👦",
+      "sentences": [
+        {
+          "pattern": "I am a ___",
+          "english": "I am a boy.",
+          "japanese": "私は男の子です。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a boy.",
+          "japanese": "男の子が見えます。"
+        },
+        {
+          "pattern": "This is a ___",
+          "english": "This is a boy.",
+          "japanese": "これは男の子です。"
+        }
+      ]
+    },
+    {
+      "id": 75,
+      "english": "Girl",
+      "japanese": "女の子",
+      "category": "family",
+      "emoji": "👧",
+      "sentences": [
+        {
+          "pattern": "I am a ___",
+          "english": "I am a girl.",
+          "japanese": "私は女の子です。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a girl.",
+          "japanese": "女の子が見えます。"
+        },
+        {
+          "pattern": "This is a ___",
+          "english": "This is a girl.",
+          "japanese": "これは女の子です。"
+        }
+      ]
+    },
+    {
+      "id": 76,
+      "english": "Brother",
+      "japanese": "兄弟",
+      "category": "family",
+      "emoji": "👦",
+      "sentences": [
+        {
+          "pattern": "This is ___",
+          "english": "This is my brother.",
+          "japanese": "これは私の兄弟です。"
+        },
+        {
+          "pattern": "I see ___",
+          "english": "I see my brother.",
+          "japanese": "兄弟が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like my brother.",
+          "japanese": "兄弟が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 77,
+      "english": "Sister",
+      "japanese": "姉妹",
+      "category": "family",
+      "emoji": "👧",
+      "sentences": [
+        {
+          "pattern": "This is ___",
+          "english": "This is my sister.",
+          "japanese": "これは私の姉妹です。"
+        },
+        {
+          "pattern": "I see ___",
+          "english": "I see my sister.",
+          "japanese": "姉妹が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like my sister.",
+          "japanese": "姉妹が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 78,
+      "english": "Friend",
+      "japanese": "友達",
+      "category": "family",
+      "emoji": "👫",
+      "sentences": [
+        {
+          "pattern": "This is ___",
+          "english": "This is my friend.",
+          "japanese": "これは私の友達です。"
+        },
+        {
+          "pattern": "I see ___",
+          "english": "I see my friend.",
+          "japanese": "友達が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like my friend.",
+          "japanese": "友達が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 79,
+      "english": "Teacher",
+      "japanese": "先生",
+      "category": "family",
+      "emoji": "👨‍🏫",
+      "sentences": [
+        {
+          "pattern": "This is ___",
+          "english": "This is my teacher.",
+          "japanese": "これは私の先生です。"
+        },
+        {
+          "pattern": "I see ___",
+          "english": "I see my teacher.",
+          "japanese": "先生が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like my teacher.",
+          "japanese": "先生が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 80,
+      "english": "Doctor",
+      "japanese": "お医者さん",
+      "category": "family",
+      "emoji": "👨‍⚕️",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a doctor.",
+          "japanese": "これはお医者さんです。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a doctor.",
+          "japanese": "お医者さんが見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like doctors.",
+          "japanese": "お医者さんが好きです。"
+        }
+      ]
+    },
+    {
+      "id": 81,
+      "english": "Sun",
+      "japanese": "太陽",
+      "category": "nature",
+      "emoji": "☀️",
+      "sentences": [
+        {
+          "pattern": "This is ___",
+          "english": "This is the sun.",
+          "japanese": "これは太陽です。"
+        },
+        {
+          "pattern": "I see ___",
+          "english": "I see the sun.",
+          "japanese": "太陽が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like the sun.",
+          "japanese": "太陽が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 82,
+      "english": "Moon",
+      "japanese": "月",
+      "category": "nature",
+      "emoji": "🌙",
+      "sentences": [
+        {
+          "pattern": "This is ___",
+          "english": "This is the moon.",
+          "japanese": "これは月です。"
+        },
+        {
+          "pattern": "I see ___",
+          "english": "I see the moon.",
+          "japanese": "月が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like the moon.",
+          "japanese": "月が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 83,
+      "english": "Cloud",
+      "japanese": "雲",
+      "category": "nature",
+      "emoji": "☁️",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a cloud.",
+          "japanese": "これは雲です。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a cloud.",
+          "japanese": "雲が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like clouds.",
+          "japanese": "雲が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 84,
+      "english": "Rain",
+      "japanese": "雨",
+      "category": "nature",
+      "emoji": "🌧️",
+      "sentences": [
+        {
+          "pattern": "This is ___",
+          "english": "This is rain.",
+          "japanese": "これは雨です。"
+        },
+        {
+          "pattern": "I see ___",
+          "english": "I see rain.",
+          "japanese": "雨が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like rain.",
+          "japanese": "雨が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 85,
+      "english": "Snow",
+      "japanese": "雪",
+      "category": "nature",
+      "emoji": "❄️",
+      "sentences": [
+        {
+          "pattern": "This is ___",
+          "english": "This is snow.",
+          "japanese": "これは雪です。"
+        },
+        {
+          "pattern": "I see ___",
+          "english": "I see snow.",
+          "japanese": "雪が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like snow.",
+          "japanese": "雪が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 86,
+      "english": "Tree",
+      "japanese": "木",
+      "category": "nature",
+      "emoji": "🌳",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a tree.",
+          "japanese": "これは木です。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a tree.",
+          "japanese": "木が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like trees.",
+          "japanese": "木が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 87,
+      "english": "Flower",
+      "japanese": "花",
+      "category": "nature",
+      "emoji": "🌸",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a flower.",
+          "japanese": "これは花です。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a flower.",
+          "japanese": "花が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like flowers.",
+          "japanese": "花が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 88,
+      "english": "Mountain",
+      "japanese": "山",
+      "category": "nature",
+      "emoji": "⛰️",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a mountain.",
+          "japanese": "これは山です。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a mountain.",
+          "japanese": "山が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like mountains.",
+          "japanese": "山が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 89,
+      "english": "Sea",
+      "japanese": "海",
+      "category": "nature",
+      "emoji": "🌊",
+      "sentences": [
+        {
+          "pattern": "This is ___",
+          "english": "This is the sea.",
+          "japanese": "これは海です。"
+        },
+        {
+          "pattern": "I see ___",
+          "english": "I see the sea.",
+          "japanese": "海が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like the sea.",
+          "japanese": "海が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 90,
+      "english": "Grass",
+      "japanese": "草",
+      "category": "nature",
+      "emoji": "🌿",
+      "sentences": [
+        {
+          "pattern": "This is ___",
+          "english": "This is grass.",
+          "japanese": "これは草です。"
+        },
+        {
+          "pattern": "I see ___",
+          "english": "I see grass.",
+          "japanese": "草が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like grass.",
+          "japanese": "草が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 91,
+      "english": "Kitchen",
+      "japanese": "キッチン",
+      "category": "home",
+      "emoji": "🍳",
+      "sentences": [
+        {
+          "pattern": "This is ___",
+          "english": "This is the kitchen.",
+          "japanese": "これはキッチンです。"
+        },
+        {
+          "pattern": "I see ___",
+          "english": "I see the kitchen.",
+          "japanese": "キッチンが見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like the kitchen.",
+          "japanese": "キッチンが好きです。"
+        }
+      ]
+    },
+    {
+      "id": 92,
+      "english": "Bathroom",
+      "japanese": "お風呂",
+      "category": "home",
+      "emoji": "🛁",
+      "sentences": [
+        {
+          "pattern": "This is ___",
+          "english": "This is the bathroom.",
+          "japanese": "これはお風呂です。"
+        },
+        {
+          "pattern": "I see ___",
+          "english": "I see the bathroom.",
+          "japanese": "お風呂が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like the bathroom.",
+          "japanese": "お風呂が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 93,
+      "english": "Bedroom",
+      "japanese": "寝室",
+      "category": "home",
+      "emoji": "🛏️",
+      "sentences": [
+        {
+          "pattern": "This is ___",
+          "english": "This is the bedroom.",
+          "japanese": "これは寝室です。"
+        },
+        {
+          "pattern": "I see ___",
+          "english": "I see the bedroom.",
+          "japanese": "寝室が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like the bedroom.",
+          "japanese": "寝室が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 94,
+      "english": "Window",
+      "japanese": "窓",
+      "category": "home",
+      "emoji": "🪟",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a window.",
+          "japanese": "これは窓です。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a window.",
+          "japanese": "窓が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like windows.",
+          "japanese": "窓が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 95,
+      "english": "Clock",
+      "japanese": "時計",
+      "category": "home",
+      "emoji": "🕐",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a clock.",
+          "japanese": "これは時計です。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a clock.",
+          "japanese": "時計が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like clocks.",
+          "japanese": "時計が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 96,
+      "english": "TV",
+      "japanese": "テレビ",
+      "category": "home",
+      "emoji": "📺",
+      "sentences": [
+        {
+          "pattern": "This is ___",
+          "english": "This is a TV.",
+          "japanese": "これはテレビです。"
+        },
+        {
+          "pattern": "I see ___",
+          "english": "I see a TV.",
+          "japanese": "テレビが見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like TV.",
+          "japanese": "テレビが好きです。"
+        }
+      ]
+    },
+    {
+      "id": 97,
+      "english": "Phone",
+      "japanese": "電話",
+      "category": "home",
+      "emoji": "📱",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a phone.",
+          "japanese": "これは電話です。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a phone.",
+          "japanese": "電話が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like phones.",
+          "japanese": "電話が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 98,
+      "english": "Light",
+      "japanese": "電気",
+      "category": "home",
+      "emoji": "💡",
+      "sentences": [
+        {
+          "pattern": "This is ___",
+          "english": "This is a light.",
+          "japanese": "これは電気です。"
+        },
+        {
+          "pattern": "I see ___",
+          "english": "I see a light.",
+          "japanese": "電気が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like lights.",
+          "japanese": "電気が好きです。"
+        }
+      ]
+    },
+    {
+      "id": 99,
+      "english": "Toy",
+      "japanese": "おもちゃ",
+      "category": "home",
+      "emoji": "🧸",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a toy.",
+          "japanese": "これはおもちゃです。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a toy.",
+          "japanese": "おもちゃが見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like toys.",
+          "japanese": "おもちゃが好きです。"
+        }
+      ]
+    },
+    {
+      "id": 100,
+      "english": "Blanket",
+      "japanese": "毛布",
+      "category": "home",
+      "emoji": "🛏️",
+      "sentences": [
+        {
+          "pattern": "This is a ___",
+          "english": "This is a blanket.",
+          "japanese": "これは毛布です。"
+        },
+        {
+          "pattern": "I see a ___",
+          "english": "I see a blanket.",
+          "japanese": "毛布が見えます。"
+        },
+        {
+          "pattern": "I like ___",
+          "english": "I like blankets.",
+          "japanese": "毛布が好きです。"
+        }
+      ]
+    }
+  ],
+  "categories": {
+    "animals": {
+      "japanese": "動物",
+      "emoji": "🐾",
+      "count": 20,
+      "weekday": "monday"
+    },
+    "food": {
+      "japanese": "食べ物",
+      "emoji": "🍎",
+      "count": 20,
+      "weekday": "tuesday"
+    },
+    "things": {
+      "japanese": "身の回りのもの",
+      "emoji": "👕",
+      "count": 20,
+      "weekday": "wednesday"
+    },
+    "colors": {
+      "japanese": "色・形",
+      "emoji": "🎨",
+      "count": 10,
+      "weekday": "saturday"
+    },
+    "family": {
+      "japanese": "家族・人",
+      "emoji": "👨‍👩‍👧‍👦",
+      "count": 10,
+      "weekday": "thursday"
+    },
+    "nature": {
+      "japanese": "自然",
+      "emoji": "🌳",
+      "count": 10,
+      "weekday": "friday"
+    },
+    "home": {
+      "japanese": "家の中",
+      "emoji": "🏠",
+      "count": 10,
+      "weekday": "sunday"
+    }
+  }
+}
