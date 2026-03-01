@@ -4,8 +4,9 @@
  */
 
 export interface SessionRecord {
+  id: string; // ユニークID（日付+タイムスタンプ）
   date: string; // YYYY-MM-DD形式
-  wordId: number;
+  wordIds: number[]; // 学習した単語IDの配列（最大3つ）
   completed: boolean;
   completedAt?: string; // ISO 8601形式
   notes?: {
@@ -45,12 +46,26 @@ export function getAllRecords(): SessionRecord[] {
 }
 
 /**
- * 今日の記録を取得
+ * 今日の記録を取得（最新のセッション）
  */
 export function getTodayRecord(): SessionRecord | null {
   const today = getLocalDateString();
   const records = getAllRecords();
-  return records.find((r) => r.date === today) || null;
+  const todayRecords = records
+    .filter((r) => r.date === today)
+    .sort((a, b) => (b.completedAt || '').localeCompare(a.completedAt || ''));
+  return todayRecords[0] || null;
+}
+
+/**
+ * 今日の全セッションを取得
+ */
+export function getTodayRecords(): SessionRecord[] {
+  const today = getLocalDateString();
+  const records = getAllRecords();
+  return records
+    .filter((r) => r.date === today)
+    .sort((a, b) => (a.completedAt || '').localeCompare(b.completedAt || ''));
 }
 
 /**
@@ -62,13 +77,13 @@ export function getRecordByDate(date: string): SessionRecord | null {
 }
 
 /**
- * 実施記録を保存
+ * 実施記録を保存（IDで識別）
  */
 export function saveRecord(record: SessionRecord): void {
   if (typeof window === 'undefined') return;
 
   const records = getAllRecords();
-  const existingIndex = records.findIndex((r) => r.date === record.date);
+  const existingIndex = records.findIndex((r) => r.id === record.id);
 
   if (existingIndex >= 0) {
     records[existingIndex] = record;
@@ -80,31 +95,36 @@ export function saveRecord(record: SessionRecord): void {
 }
 
 /**
- * 今日の記録を保存
+ * 今日の記録を保存（新しいセッションとして追加）
  */
-export function saveTodayRecord(wordId: number, completed: boolean): void {
+export function saveTodayRecord(wordIds: number[], completed: boolean): void {
   const today = getLocalDateString();
-  const existingRecord = getTodayRecord();
+  const timestamp = new Date().toISOString();
+  const sessionId = `${today}_${timestamp}`; // ユニークなID
+
   const record: SessionRecord = {
+    id: sessionId,
     date: today,
-    wordId,
+    wordIds,
     completed,
-    completedAt: completed ? new Date().toISOString() : undefined,
-    notes: existingRecord?.notes, // 既存のメモを保持
+    completedAt: completed ? timestamp : undefined,
   };
   saveRecord(record);
 }
 
 /**
- * 今日の記録にメモを追加
+ * セッションにメモを追加（最新のセッション）
  */
-export function updateTodayNotes(notes: {
-  books?: string;
-  materials?: string;
-  other?: string;
-}): void {
-  const today = getLocalDateString();
-  const existingRecord = getTodayRecord();
+export function updateSessionNotes(
+  sessionId: string,
+  notes: {
+    books?: string;
+    materials?: string;
+    other?: string;
+  }
+): void {
+  const records = getAllRecords();
+  const existingRecord = records.find((r) => r.id === sessionId);
 
   if (existingRecord) {
     // 既存の記録を更新
@@ -116,15 +136,20 @@ export function updateTodayNotes(notes: {
       },
     };
     saveRecord(record);
-  } else {
-    // 記録がない場合は新規作成
-    const record: SessionRecord = {
-      date: today,
-      wordId: 0, // 仮のID
-      completed: false,
-      notes,
-    };
-    saveRecord(record);
+  }
+}
+
+/**
+ * 今日の最新セッションにメモを追加
+ */
+export function updateTodayNotes(notes: {
+  books?: string;
+  materials?: string;
+  other?: string;
+}): void {
+  const latestSession = getTodayRecord();
+  if (latestSession) {
+    updateSessionNotes(latestSession.id, notes);
   }
 }
 

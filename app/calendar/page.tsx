@@ -54,13 +54,88 @@ export default function CalendarPage() {
     setSelectedDate(date);
     const record = getRecordByDate(date);
     if (record && record.completed) {
-      const word = getWordById(record.wordId);
-      if (word) {
-        setSelectedWord({ english: word.english, japanese: word.japanese });
+      const words = record.wordIds
+        .map((id) => getWordById(id))
+        .filter(Boolean);
+      if (words.length > 0) {
+        setSelectedWord({
+          english: words.map((w) => w!.english).join(', '),
+          japanese: words.map((w) => w!.japanese).join(', '),
+        });
       }
     } else {
       setSelectedWord(null);
     }
+  };
+
+  // CSVダウンロード
+  const handleDownloadCSV = () => {
+    if (monthRecords.length === 0) {
+      alert('記録がありません');
+      return;
+    }
+
+    // CSVヘッダー
+    const headers = ['日付', '時間帯', '単語', '絵本', '教材', 'メモ'];
+
+    // CSVデータ
+    const rows = monthRecords.map((record) => {
+      const date = new Date(record.date + 'T00:00:00');
+      const dateStr = `${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()}`;
+
+      // 時間帯
+      let timeLabel = '';
+      if (record.completedAt) {
+        const time = new Date(record.completedAt);
+        const hour = time.getHours();
+        if (hour < 12) timeLabel = '朝';
+        else if (hour < 18) timeLabel = '昼';
+        else timeLabel = '夜';
+      }
+
+      // 単語
+      const words = record.wordIds
+        .map((id) => {
+          const word = getWordById(id);
+          return word ? word.english : null;
+        })
+        .filter(Boolean)
+        .join(', ');
+
+      return [
+        dateStr,
+        timeLabel,
+        words || '',
+        record.notes?.books || '',
+        record.notes?.materials || '',
+        record.notes?.other || '',
+      ];
+    });
+
+    // CSV文字列を生成
+    const csvContent = [
+      headers.join(','),
+      ...rows.map((row) =>
+        row.map((cell) => `"${cell.replace(/"/g, '""')}"`).join(',')
+      ),
+    ].join('\n');
+
+    // BOM付きUTF-8でダウンロード
+    const bom = '\uFEFF';
+    const blob = new Blob([bom + csvContent], { type: 'text/csv;charset=utf-8;' });
+    const link = document.createElement('a');
+    const url = URL.createObjectURL(blob);
+
+    const year = currentDate.getFullYear();
+    const month = String(currentDate.getMonth() + 1).padStart(2, '0');
+    const filename = `キズナタイマー_${year}年${month}月.csv`;
+
+    link.setAttribute('href', url);
+    link.setAttribute('download', filename);
+    link.style.visibility = 'hidden';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -120,16 +195,28 @@ export default function CalendarPage() {
 
         {/* 月間記録テーブル */}
         <div className="mt-8 w-full max-w-4xl">
-          <div className="mb-4 text-center">
+          <div className="mb-4 flex items-center justify-between">
+            <div className="flex-1" />
             <h2 className="text-xl font-bold text-gray-800">
               {currentDate.getFullYear()}年{currentDate.getMonth() + 1}月の記録
             </h2>
+            <div className="flex-1 text-right">
+              {monthRecords.length > 0 && (
+                <button
+                  onClick={handleDownloadCSV}
+                  className="rounded-full bg-green-500 px-4 py-2 text-sm font-medium text-white shadow-md transition-all hover:bg-green-600 hover:shadow-lg"
+                >
+                  📥 CSVダウンロード
+                </button>
+              )}
+            </div>
           </div>
           <div className="overflow-x-auto rounded-3xl bg-white shadow-lg">
             <table className="w-full">
               <thead className="bg-gradient-to-r from-blue-500 to-purple-500 text-white">
                 <tr>
                   <th className="px-4 py-3 text-left text-sm font-bold">日付</th>
+                  <th className="px-4 py-3 text-left text-sm font-bold">📖 単語</th>
                   <th className="px-4 py-3 text-left text-sm font-bold">📚 絵本</th>
                   <th className="px-4 py-3 text-left text-sm font-bold">✏️ 教材</th>
                   <th className="px-4 py-3 text-left text-sm font-bold">💭 メモ</th>
@@ -137,14 +224,38 @@ export default function CalendarPage() {
               </thead>
               <tbody className="divide-y divide-gray-200">
                 {monthRecords.length > 0 ? (
-                  monthRecords.map((record) => {
+                  monthRecords.map((record, index) => {
                     const date = new Date(record.date + 'T00:00:00');
                     const dateStr = `${date.getMonth() + 1}/${date.getDate()}`;
+
+                    // 完了時刻から時間帯を取得
+                    let timeLabel = '';
+                    if (record.completedAt) {
+                      const time = new Date(record.completedAt);
+                      const hour = time.getHours();
+                      if (hour < 12) timeLabel = '朝';
+                      else if (hour < 18) timeLabel = '昼';
+                      else timeLabel = '夜';
+                    }
+
+                    // 単語を取得
+                    const words = record.wordIds
+                      .map((id) => {
+                        const word = getWordById(id);
+                        return word ? word.english : null;
+                      })
+                      .filter(Boolean)
+                      .join(', ');
+
                     return (
-                      <tr key={record.date} className="hover:bg-gray-50">
+                      <tr key={record.id} className="hover:bg-gray-50">
                         <td className="px-4 py-3 text-sm font-medium text-gray-800">
                           {dateStr}
+                          {timeLabel && <span className="ml-1 text-xs text-gray-500">({timeLabel})</span>}
                           {record.completed && <span className="ml-2">⭐</span>}
+                        </td>
+                        <td className="px-4 py-3 text-sm text-gray-600">
+                          {words || '-'}
                         </td>
                         <td className="px-4 py-3 text-sm text-gray-600">
                           {record.notes?.books || '-'}
@@ -160,7 +271,7 @@ export default function CalendarPage() {
                   })
                 ) : (
                   <tr>
-                    <td colSpan={4} className="px-4 py-8 text-center text-gray-500">
+                    <td colSpan={5} className="px-4 py-8 text-center text-gray-500">
                       この月の記録はまだありません
                     </td>
                   </tr>

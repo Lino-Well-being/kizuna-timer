@@ -24,7 +24,7 @@ export default function WordsPage() {
     const completedIds = new Set(
       records
         .filter((r) => r.completed)
-        .map((r) => r.wordId)
+        .flatMap((r) => r.wordIds) // 複数の単語IDを展開
     );
     setCompletedWordIds(completedIds);
   }, []);

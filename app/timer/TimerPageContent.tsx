@@ -39,11 +39,11 @@ export default function TimerPageContent() {
   }, [searchParams]);
 
   const handleComplete = () => {
-    // タイマー完了時の処理：記録を保存
+    // タイマー完了時の処理：記録を保存（3つの単語全て）
     if (todayWords.length > 0) {
-      // 最初の単語のIDを保存（または3つ全部保存する方法も検討）
-      saveTodayRecord(todayWords[0].id, true);
-      console.log('タイマー完了！記録を保存しました。');
+      const wordIds = todayWords.map((w) => w.id);
+      saveTodayRecord(wordIds, true);
+      console.log('タイマー完了！記録を保存しました。単語:', wordIds);
     }
     setIsCompleted(true);
   };
