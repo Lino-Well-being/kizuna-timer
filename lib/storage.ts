@@ -239,10 +239,12 @@ export function getCompletedDatesInMonth(year: number, month: number): string[] 
 }
 
 /**
- * 実施日数を取得（全期間）
+ * 実施日数を取得（全期間）- ユニークな日付でカウント
  */
 export function getTotalCompletedDays(): number {
-  return getAllRecords().filter((r) => r.completed).length;
+  const records = getAllRecords().filter((r) => r.completed);
+  const uniqueDates = new Set(records.map((r) => r.date));
+  return uniqueDates.size;
 }
 
 /**

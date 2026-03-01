@@ -37,6 +37,25 @@ export default function RecordingsPage() {
     }
   };
 
+  const handleDownload = (recording: AudioRecording) => {
+    // data URLからダウンロードリンクを作成
+    const link = document.createElement('a');
+    link.href = recording.audioUrl;
+
+    // ファイル名を生成（日付＋単語名）
+    const date = new Date(recording.timestamp);
+    const dateStr = date.toISOString().split('T')[0];
+    const word = getWordInfo(recording.wordId);
+    const wordName = word ? word.english : 'recording';
+    const filename = `${dateStr}_${wordName}.webm`; // WebM形式
+
+    link.download = filename;
+    link.style.display = 'none';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   const getWordInfo = (wordId?: number) => {
     if (!wordId) return null;
     const word = getWordById(wordId);
@@ -118,23 +137,31 @@ export default function RecordingsPage() {
                   </div>
 
                   {/* コントロールボタン */}
-                  <div className="flex gap-2">
+                  <div className="flex flex-col gap-2">
+                    <div className="flex gap-2">
+                      <button
+                        onClick={() => handlePlay(recording)}
+                        disabled={playingId === recording.id}
+                        className={`flex-1 rounded-full px-6 py-3 font-medium text-white shadow-md transition-all ${
+                          playingId === recording.id
+                            ? 'bg-gray-400'
+                            : 'bg-gradient-to-r from-blue-500 to-purple-500 hover:scale-105 hover:shadow-lg'
+                        }`}
+                      >
+                        {playingId === recording.id ? '⏸️ 再生中' : '▶️ 再生'}
+                      </button>
+                      <button
+                        onClick={() => handleDelete(recording.id)}
+                        className="rounded-full border-2 border-red-300 bg-white px-6 py-3 font-medium text-red-600 transition-all hover:scale-105 hover:border-red-400 hover:bg-red-50"
+                      >
+                        🗑️ 削除
+                      </button>
+                    </div>
                     <button
-                      onClick={() => handlePlay(recording)}
-                      disabled={playingId === recording.id}
-                      className={`flex-1 rounded-full px-6 py-3 font-medium text-white shadow-md transition-all ${
-                        playingId === recording.id
-                          ? 'bg-gray-400'
-                          : 'bg-gradient-to-r from-blue-500 to-purple-500 hover:scale-105 hover:shadow-lg'
-                      }`}
+                      onClick={() => handleDownload(recording)}
+                      className="w-full rounded-full bg-green-500 px-6 py-3 font-medium text-white shadow-md transition-all hover:scale-105 hover:bg-green-600 hover:shadow-lg"
                     >
-                      {playingId === recording.id ? '⏸️ 再生中' : '▶️ 再生'}
-                    </button>
-                    <button
-                      onClick={() => handleDelete(recording.id)}
-                      className="rounded-full border-2 border-red-300 bg-white px-6 py-3 font-medium text-red-600 transition-all hover:scale-105 hover:border-red-400 hover:bg-red-50"
-                    >
-                      🗑️ 削除
+                      📥 ダウンロード
                     </button>
                   </div>
                 </div>
