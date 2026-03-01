@@ -9,6 +9,8 @@ import {
   getTotalCompletedDays,
   getNextMilestone,
   getRecordByDate,
+  getAllRecords,
+  type SessionRecord,
 } from '@/lib/storage';
 import { getWordById } from '@/lib/words';
 
@@ -21,6 +23,7 @@ export default function CalendarPage() {
   const [nextMilestone, setNextMilestone] = useState({ days: 7, label: '1週間' });
   const [selectedDate, setSelectedDate] = useState<string | null>(null);
   const [selectedWord, setSelectedWord] = useState<{ english: string; japanese: string } | null>(null);
+  const [monthRecords, setMonthRecords] = useState<SessionRecord[]>([]);
 
   useEffect(() => {
     // データを読み込む
@@ -37,6 +40,14 @@ export default function CalendarPage() {
 
     const milestone = getNextMilestone();
     setNextMilestone(milestone);
+
+    // 月間記録を取得
+    const allRecords = getAllRecords();
+    const monthStr = String(month).padStart(2, '0');
+    const records = allRecords
+      .filter((r) => r.date.startsWith(`${year}-${monthStr}`))
+      .sort((a, b) => a.date.localeCompare(b.date)); // 日付順にソート
+    setMonthRecords(records);
   }, [currentDate]);
 
   const handleDateClick = (date: string) => {
@@ -100,7 +111,64 @@ export default function CalendarPage() {
         </div>
 
         {/* カレンダー */}
-        <Calendar completedDates={completedDates} onDateClick={handleDateClick} />
+        <Calendar
+          completedDates={completedDates}
+          onDateClick={handleDateClick}
+          currentDate={currentDate}
+          onMonthChange={setCurrentDate}
+        />
+
+        {/* 月間記録テーブル */}
+        <div className="mt-8 w-full max-w-4xl">
+          <div className="mb-4 text-center">
+            <h2 className="text-xl font-bold text-gray-800">
+              {currentDate.getFullYear()}年{currentDate.getMonth() + 1}月の記録
+            </h2>
+          </div>
+          <div className="overflow-x-auto rounded-3xl bg-white shadow-lg">
+            <table className="w-full">
+              <thead className="bg-gradient-to-r from-blue-500 to-purple-500 text-white">
+                <tr>
+                  <th className="px-4 py-3 text-left text-sm font-bold">日付</th>
+                  <th className="px-4 py-3 text-left text-sm font-bold">📚 絵本</th>
+                  <th className="px-4 py-3 text-left text-sm font-bold">✏️ 教材</th>
+                  <th className="px-4 py-3 text-left text-sm font-bold">💭 メモ</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-200">
+                {monthRecords.length > 0 ? (
+                  monthRecords.map((record) => {
+                    const date = new Date(record.date + 'T00:00:00');
+                    const dateStr = `${date.getMonth() + 1}/${date.getDate()}`;
+                    return (
+                      <tr key={record.date} className="hover:bg-gray-50">
+                        <td className="px-4 py-3 text-sm font-medium text-gray-800">
+                          {dateStr}
+                          {record.completed && <span className="ml-2">⭐</span>}
+                        </td>
+                        <td className="px-4 py-3 text-sm text-gray-600">
+                          {record.notes?.books || '-'}
+                        </td>
+                        <td className="px-4 py-3 text-sm text-gray-600">
+                          {record.notes?.materials || '-'}
+                        </td>
+                        <td className="px-4 py-3 text-sm text-gray-600">
+                          {record.notes?.other || '-'}
+                        </td>
+                      </tr>
+                    );
+                  })
+                ) : (
+                  <tr>
+                    <td colSpan={4} className="px-4 py-8 text-center text-gray-500">
+                      この月の記録はまだありません
+                    </td>
+                  </tr>
+                )}
+              </tbody>
+            </table>
+          </div>
+        </div>
 
         {/* 選択した日の詳細 */}
         {selectedDate && selectedWord && (

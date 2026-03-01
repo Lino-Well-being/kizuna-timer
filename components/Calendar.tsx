@@ -1,14 +1,18 @@
 'use client';
 
-import { useState } from 'react';
-
 interface CalendarProps {
   completedDates: string[]; // YYYY-MM-DD形式の配列
   onDateClick?: (date: string) => void;
+  currentDate?: Date; // 外部から渡される現在日付
+  onMonthChange?: (date: Date) => void; // 月が変更されたときのコールバック
 }
 
-export default function Calendar({ completedDates, onDateClick }: CalendarProps) {
-  const [currentDate, setCurrentDate] = useState(new Date());
+export default function Calendar({
+  completedDates,
+  onDateClick,
+  currentDate = new Date(),
+  onMonthChange
+}: CalendarProps) {
 
   const year = currentDate.getFullYear();
   const month = currentDate.getMonth();
@@ -57,12 +61,18 @@ export default function Calendar({ completedDates, onDateClick }: CalendarProps)
 
   // 前月へ
   const handlePrevMonth = () => {
-    setCurrentDate(new Date(year, month - 1, 1));
+    const newDate = new Date(year, month - 1, 1);
+    if (onMonthChange) {
+      onMonthChange(newDate);
+    }
   };
 
   // 次月へ
   const handleNextMonth = () => {
-    setCurrentDate(new Date(year, month + 1, 1));
+    const newDate = new Date(year, month + 1, 1);
+    if (onMonthChange) {
+      onMonthChange(newDate);
+    }
   };
 
   // 日付クリック（ローカル時刻で変換）
