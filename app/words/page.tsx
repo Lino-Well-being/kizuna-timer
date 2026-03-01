@@ -41,6 +41,8 @@ export default function WordsPage() {
     { value: 'nature', label: '自然', emoji: '🌳' },
     { value: 'colors', label: '色', emoji: '🎨' },
     { value: 'home', label: 'おうち', emoji: '🏠' },
+    { value: 'numbers', label: '数字', emoji: '🔢' },
+    { value: 'weather', label: '天気', emoji: '☀️' },
   ];
 
   // フィルタリング

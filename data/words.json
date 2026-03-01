@@ -2399,6 +2399,486 @@
           "japanese": "毛布が好きです。"
         }
       ]
+    },
+    {
+      "id": 101,
+      "english": "One",
+      "japanese": "1",
+      "category": "numbers",
+      "emoji": "1️⃣",
+      "sentences": [
+        {
+          "pattern": "I have ___",
+          "english": "I have one apple.",
+          "japanese": "りんごが1つあります。"
+        },
+        {
+          "pattern": "Count to ___",
+          "english": "Count to one.",
+          "japanese": "1まで数えます。"
+        },
+        {
+          "pattern": "___ plus ___",
+          "english": "One plus one is two.",
+          "japanese": "1たす1は2です。"
+        }
+      ]
+    },
+    {
+      "id": 102,
+      "english": "Two",
+      "japanese": "2",
+      "category": "numbers",
+      "emoji": "2️⃣",
+      "sentences": [
+        {
+          "pattern": "I have ___",
+          "english": "I have two cats.",
+          "japanese": "猫が2匹います。"
+        },
+        {
+          "pattern": "I see ___",
+          "english": "I see two birds.",
+          "japanese": "鳥が2羽見えます。"
+        },
+        {
+          "pattern": "___ hands",
+          "english": "I have two hands.",
+          "japanese": "手が2つあります。"
+        }
+      ]
+    },
+    {
+      "id": 103,
+      "english": "Three",
+      "japanese": "3",
+      "category": "numbers",
+      "emoji": "3️⃣",
+      "sentences": [
+        {
+          "pattern": "I have ___",
+          "english": "I have three books.",
+          "japanese": "本が3冊あります。"
+        },
+        {
+          "pattern": "___ little pigs",
+          "english": "Three little pigs.",
+          "japanese": "3匹の子ぶた。"
+        },
+        {
+          "pattern": "Count to ___",
+          "english": "Count to three.",
+          "japanese": "3まで数えます。"
+        }
+      ]
+    },
+    {
+      "id": 104,
+      "english": "Four",
+      "japanese": "4",
+      "category": "numbers",
+      "emoji": "4️⃣",
+      "sentences": [
+        {
+          "pattern": "I have ___",
+          "english": "I have four crayons.",
+          "japanese": "クレヨンが4本あります。"
+        },
+        {
+          "pattern": "___ legs",
+          "english": "A dog has four legs.",
+          "japanese": "犬は足が4本あります。"
+        },
+        {
+          "pattern": "Count to ___",
+          "english": "Count to four.",
+          "japanese": "4まで数えます。"
+        }
+      ]
+    },
+    {
+      "id": 105,
+      "english": "Five",
+      "japanese": "5",
+      "category": "numbers",
+      "emoji": "5️⃣",
+      "sentences": [
+        {
+          "pattern": "I have ___",
+          "english": "I have five fingers.",
+          "japanese": "指が5本あります。"
+        },
+        {
+          "pattern": "Count to ___",
+          "english": "Count to five.",
+          "japanese": "5まで数えます。"
+        },
+        {
+          "pattern": "___ stars",
+          "english": "I see five stars.",
+          "japanese": "星が5つ見えます。"
+        }
+      ]
+    },
+    {
+      "id": 106,
+      "english": "Six",
+      "japanese": "6",
+      "category": "numbers",
+      "emoji": "6️⃣",
+      "sentences": [
+        {
+          "pattern": "I have ___",
+          "english": "I have six toys.",
+          "japanese": "おもちゃが6つあります。"
+        },
+        {
+          "pattern": "___ legs",
+          "english": "A bug has six legs.",
+          "japanese": "虫は足が6本あります。"
+        },
+        {
+          "pattern": "Count to ___",
+          "english": "Count to six.",
+          "japanese": "6まで数えます。"
+        }
+      ]
+    },
+    {
+      "id": 107,
+      "english": "Seven",
+      "japanese": "7",
+      "category": "numbers",
+      "emoji": "7️⃣",
+      "sentences": [
+        {
+          "pattern": "I have ___",
+          "english": "I have seven marbles.",
+          "japanese": "ビー玉が7つあります。"
+        },
+        {
+          "pattern": "___ days",
+          "english": "Seven days in a week.",
+          "japanese": "1週間は7日です。"
+        },
+        {
+          "pattern": "Count to ___",
+          "english": "Count to seven.",
+          "japanese": "7まで数えます。"
+        }
+      ]
+    },
+    {
+      "id": 108,
+      "english": "Eight",
+      "japanese": "8",
+      "category": "numbers",
+      "emoji": "8️⃣",
+      "sentences": [
+        {
+          "pattern": "I have ___",
+          "english": "I have eight cookies.",
+          "japanese": "クッキーが8枚あります。"
+        },
+        {
+          "pattern": "___ legs",
+          "english": "A spider has eight legs.",
+          "japanese": "クモは足が8本あります。"
+        },
+        {
+          "pattern": "Count to ___",
+          "english": "Count to eight.",
+          "japanese": "8まで数えます。"
+        }
+      ]
+    },
+    {
+      "id": 109,
+      "english": "Nine",
+      "japanese": "9",
+      "category": "numbers",
+      "emoji": "9️⃣",
+      "sentences": [
+        {
+          "pattern": "I have ___",
+          "english": "I have nine pencils.",
+          "japanese": "鉛筆が9本あります。"
+        },
+        {
+          "pattern": "Count to ___",
+          "english": "Count to nine.",
+          "japanese": "9まで数えます。"
+        },
+        {
+          "pattern": "___ blocks",
+          "english": "I see nine blocks.",
+          "japanese": "ブロックが9個見えます。"
+        }
+      ]
+    },
+    {
+      "id": 110,
+      "english": "Ten",
+      "japanese": "10",
+      "category": "numbers",
+      "emoji": "🔟",
+      "sentences": [
+        {
+          "pattern": "I have ___",
+          "english": "I have ten toes.",
+          "japanese": "つま先が10本あります。"
+        },
+        {
+          "pattern": "Count to ___",
+          "english": "Count to ten.",
+          "japanese": "10まで数えます。"
+        },
+        {
+          "pattern": "___ fingers",
+          "english": "I have ten fingers.",
+          "japanese": "指が10本あります。"
+        }
+      ]
+    },
+    {
+      "id": 111,
+      "english": "Sunny",
+      "japanese": "晴れ",
+      "category": "weather",
+      "emoji": "☀️",
+      "sentences": [
+        {
+          "pattern": "It's ___",
+          "english": "It's sunny today.",
+          "japanese": "今日は晴れです。"
+        },
+        {
+          "pattern": "I like ___ days",
+          "english": "I like sunny days.",
+          "japanese": "晴れの日が好きです。"
+        },
+        {
+          "pattern": "A ___ day",
+          "english": "It's a sunny day.",
+          "japanese": "晴れた日です。"
+        }
+      ]
+    },
+    {
+      "id": 112,
+      "english": "Rainy",
+      "japanese": "雨",
+      "category": "weather",
+      "emoji": "🌧️",
+      "sentences": [
+        {
+          "pattern": "It's ___",
+          "english": "It's rainy today.",
+          "japanese": "今日は雨です。"
+        },
+        {
+          "pattern": "A ___ day",
+          "english": "It's a rainy day.",
+          "japanese": "雨の日です。"
+        },
+        {
+          "pattern": "I see ___",
+          "english": "I see rain.",
+          "japanese": "雨が見えます。"
+        }
+      ]
+    },
+    {
+      "id": 113,
+      "english": "Cloudy",
+      "japanese": "曇り",
+      "category": "weather",
+      "emoji": "☁️",
+      "sentences": [
+        {
+          "pattern": "It's ___",
+          "english": "It's cloudy today.",
+          "japanese": "今日は曇りです。"
+        },
+        {
+          "pattern": "A ___ day",
+          "english": "It's a cloudy day.",
+          "japanese": "曇りの日です。"
+        },
+        {
+          "pattern": "I see ___",
+          "english": "I see clouds.",
+          "japanese": "雲が見えます。"
+        }
+      ]
+    },
+    {
+      "id": 114,
+      "english": "Snowy",
+      "japanese": "雪",
+      "category": "weather",
+      "emoji": "❄️",
+      "sentences": [
+        {
+          "pattern": "It's ___",
+          "english": "It's snowy today.",
+          "japanese": "今日は雪です。"
+        },
+        {
+          "pattern": "A ___ day",
+          "english": "It's a snowy day.",
+          "japanese": "雪の日です。"
+        },
+        {
+          "pattern": "I see ___",
+          "english": "I see snow.",
+          "japanese": "雪が見えます。"
+        }
+      ]
+    },
+    {
+      "id": 115,
+      "english": "Windy",
+      "japanese": "風",
+      "category": "weather",
+      "emoji": "💨",
+      "sentences": [
+        {
+          "pattern": "It's ___",
+          "english": "It's windy today.",
+          "japanese": "今日は風が強いです。"
+        },
+        {
+          "pattern": "A ___ day",
+          "english": "It's a windy day.",
+          "japanese": "風の強い日です。"
+        },
+        {
+          "pattern": "I feel ___",
+          "english": "I feel the wind.",
+          "japanese": "風を感じます。"
+        }
+      ]
+    },
+    {
+      "id": 116,
+      "english": "Hot",
+      "japanese": "暑い",
+      "category": "weather",
+      "emoji": "🔥",
+      "sentences": [
+        {
+          "pattern": "It's ___",
+          "english": "It's hot today.",
+          "japanese": "今日は暑いです。"
+        },
+        {
+          "pattern": "I'm ___",
+          "english": "I'm hot.",
+          "japanese": "暑いです。"
+        },
+        {
+          "pattern": "A ___ day",
+          "english": "It's a hot day.",
+          "japanese": "暑い日です。"
+        }
+      ]
+    },
+    {
+      "id": 117,
+      "english": "Cold",
+      "japanese": "寒い",
+      "category": "weather",
+      "emoji": "🥶",
+      "sentences": [
+        {
+          "pattern": "It's ___",
+          "english": "It's cold today.",
+          "japanese": "今日は寒いです。"
+        },
+        {
+          "pattern": "I'm ___",
+          "english": "I'm cold.",
+          "japanese": "寒いです。"
+        },
+        {
+          "pattern": "A ___ day",
+          "english": "It's a cold day.",
+          "japanese": "寒い日です。"
+        }
+      ]
+    },
+    {
+      "id": 118,
+      "english": "Warm",
+      "japanese": "暖かい",
+      "category": "weather",
+      "emoji": "🌤️",
+      "sentences": [
+        {
+          "pattern": "It's ___",
+          "english": "It's warm today.",
+          "japanese": "今日は暖かいです。"
+        },
+        {
+          "pattern": "I feel ___",
+          "english": "I feel warm.",
+          "japanese": "暖かいです。"
+        },
+        {
+          "pattern": "A ___ day",
+          "english": "It's a warm day.",
+          "japanese": "暖かい日です。"
+        }
+      ]
+    },
+    {
+      "id": 119,
+      "english": "Cool",
+      "japanese": "涼しい",
+      "category": "weather",
+      "emoji": "🍃",
+      "sentences": [
+        {
+          "pattern": "It's ___",
+          "english": "It's cool today.",
+          "japanese": "今日は涼しいです。"
+        },
+        {
+          "pattern": "I feel ___",
+          "english": "I feel cool.",
+          "japanese": "涼しいです。"
+        },
+        {
+          "pattern": "A ___ day",
+          "english": "It's a cool day.",
+          "japanese": "涼しい日です。"
+        }
+      ]
+    },
+    {
+      "id": 120,
+      "english": "Stormy",
+      "japanese": "嵐",
+      "category": "weather",
+      "emoji": "⛈️",
+      "sentences": [
+        {
+          "pattern": "It's ___",
+          "english": "It's stormy today.",
+          "japanese": "今日は嵐です。"
+        },
+        {
+          "pattern": "A ___ day",
+          "english": "It's a stormy day.",
+          "japanese": "嵐の日です。"
+        },
+        {
+          "pattern": "I hear ___",
+          "english": "I hear thunder.",
+          "japanese": "雷が聞こえます。"
+        }
+      ]
     }
   ],
   "categories": {
@@ -2443,6 +2923,18 @@
       "emoji": "🏠",
       "count": 10,
       "weekday": "sunday"
+    },
+    "numbers": {
+      "japanese": "数字",
+      "emoji": "🔢",
+      "count": 10,
+      "weekday": ""
+    },
+    "weather": {
+      "japanese": "天気",
+      "emoji": "☀️",
+      "count": 10,
+      "weekday": ""
     }
   }
 }

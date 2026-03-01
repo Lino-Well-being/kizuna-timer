@@ -106,7 +106,7 @@ export default function Home() {
             href="/words"
             className="rounded-2xl bg-gradient-to-r from-purple-100 to-pink-100 px-6 py-4 text-center font-medium text-purple-700 shadow-md transition-all hover:shadow-lg"
           >
-            📚 単語リスト (100単語)
+            📚 単語リスト (120単語)
           </Link>
         </div>
 
