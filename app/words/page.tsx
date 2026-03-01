@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { getAllRecords } from '@/lib/storage';
+import { speakEnglish } from '@/lib/words';
 import wordsData from '@/data/words.json';
 
 interface Word {
@@ -35,11 +36,11 @@ export default function WordsPage() {
     { value: 'all', label: 'すべて', emoji: '📚' },
     { value: 'animals', label: '動物', emoji: '🐾' },
     { value: 'food', label: '食べ物', emoji: '🍎' },
-    { value: 'colors', label: '色', emoji: '🎨' },
-    { value: 'numbers', label: '数字', emoji: '🔢' },
+    { value: 'things', label: '身の回りのもの', emoji: '🎁' },
     { value: 'family', label: '家族', emoji: '👨‍👩‍👧‍👦' },
-    { value: 'body', label: '体の部位', emoji: '👋' },
-    { value: 'weather', label: '天気', emoji: '☀️' },
+    { value: 'nature', label: '自然', emoji: '🌳' },
+    { value: 'colors', label: '色', emoji: '🎨' },
+    { value: 'home', label: 'おうち', emoji: '🏠' },
   ];
 
   // フィルタリング
@@ -110,12 +111,13 @@ export default function WordsPage() {
           {filteredWords.map((word) => {
             const isCompleted = completedWordIds.has(word.id);
             return (
-              <div
+              <button
                 key={word.id}
-                className={`rounded-2xl p-4 shadow-md transition-all ${
+                onClick={() => speakEnglish(word.english)}
+                className={`rounded-2xl p-4 shadow-md transition-all hover:scale-105 hover:shadow-lg text-left ${
                   isCompleted
                     ? 'bg-gradient-to-br from-green-50 to-blue-50 border-2 border-green-300'
-                    : 'bg-white'
+                    : 'bg-white hover:bg-gray-50'
                 }`}
               >
                 <div className="mb-2 flex items-center justify-between">
@@ -128,10 +130,11 @@ export default function WordsPage() {
                   {word.english}
                 </div>
                 <div className="text-sm text-gray-600">{word.japanese}</div>
-                <div className="mt-2 text-xs text-gray-500">
-                  #{word.id}
+                <div className="mt-2 flex items-center justify-between">
+                  <div className="text-xs text-gray-500">#{word.id}</div>
+                  <div className="text-sm text-gray-400">🔊</div>
                 </div>
-              </div>
+              </button>
             );
           })}
         </div>

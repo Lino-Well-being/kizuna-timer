@@ -8,6 +8,11 @@ export interface SessionRecord {
   wordId: number;
   completed: boolean;
   completedAt?: string; // ISO 8601形式
+  notes?: {
+    books?: string; // 読んだ絵本
+    materials?: string; // 使った教材
+    other?: string; // その他メモ
+  };
 }
 
 const STORAGE_KEY = 'kizuna-timer-records';
@@ -79,13 +84,48 @@ export function saveRecord(record: SessionRecord): void {
  */
 export function saveTodayRecord(wordId: number, completed: boolean): void {
   const today = getLocalDateString();
+  const existingRecord = getTodayRecord();
   const record: SessionRecord = {
     date: today,
     wordId,
     completed,
     completedAt: completed ? new Date().toISOString() : undefined,
+    notes: existingRecord?.notes, // 既存のメモを保持
   };
   saveRecord(record);
+}
+
+/**
+ * 今日の記録にメモを追加
+ */
+export function updateTodayNotes(notes: {
+  books?: string;
+  materials?: string;
+  other?: string;
+}): void {
+  const today = getLocalDateString();
+  const existingRecord = getTodayRecord();
+
+  if (existingRecord) {
+    // 既存の記録を更新
+    const record: SessionRecord = {
+      ...existingRecord,
+      notes: {
+        ...existingRecord.notes,
+        ...notes,
+      },
+    };
+    saveRecord(record);
+  } else {
+    // 記録がない場合は新規作成
+    const record: SessionRecord = {
+      date: today,
+      wordId: 0, // 仮のID
+      completed: false,
+      notes,
+    };
+    saveRecord(record);
+  }
 }
 
 /**

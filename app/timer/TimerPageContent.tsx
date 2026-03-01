@@ -4,6 +4,7 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import Timer from '@/components/Timer';
 import AudioRecorder from '@/components/AudioRecorder';
+import NotesForm from '@/components/NotesForm';
 import { getTodayWords, getTodayCategory, getCategoryInfo, speakEnglish, type Word } from '@/lib/words';
 import { saveTodayRecord } from '@/lib/storage';
 
@@ -13,6 +14,7 @@ export default function TimerPageContent() {
   const [todayWords, setTodayWords] = useState<Word[]>([]);
   const [categoryInfo, setCategoryInfo] = useState<{ japanese: string; emoji: string } | null>(null);
   const [minutes, setMinutes] = useState(10);
+  const [isCompleted, setIsCompleted] = useState(false);
 
   useEffect(() => {
     // URLパラメータから時間を取得
@@ -43,6 +45,7 @@ export default function TimerPageContent() {
       saveTodayRecord(todayWords[0].id, true);
       console.log('タイマー完了！記録を保存しました。');
     }
+    setIsCompleted(true);
   };
 
   const handleSpeakWord = (word: string) => {
@@ -168,6 +171,13 @@ export default function TimerPageContent() {
             }}
           />
         </div>
+
+        {/* タイマー完了後の記録フォーム */}
+        {isCompleted && (
+          <div className="mt-8">
+            <NotesForm />
+          </div>
+        )}
       </main>
     </div>
   );

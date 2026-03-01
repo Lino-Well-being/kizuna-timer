@@ -31,9 +31,12 @@ export default function Calendar({ completedDates, onDateClick }: CalendarProps)
     days.push(day);
   }
 
-  // 日付が完了済みかチェック
+  // 日付が完了済みかチェック（ローカル時刻で比較）
   const isCompleted = (date: Date): boolean => {
-    const dateStr = date.toISOString().split('T')[0];
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    const dateStr = `${year}-${month}-${day}`;
     return completedDates.includes(dateStr);
   };
 
@@ -62,10 +65,13 @@ export default function Calendar({ completedDates, onDateClick }: CalendarProps)
     setCurrentDate(new Date(year, month + 1, 1));
   };
 
-  // 日付クリック
+  // 日付クリック（ローカル時刻で変換）
   const handleDateClick = (date: Date) => {
     if (onDateClick) {
-      const dateStr = date.toISOString().split('T')[0];
+      const year = date.getFullYear();
+      const month = String(date.getMonth() + 1).padStart(2, '0');
+      const day = String(date.getDate()).padStart(2, '0');
+      const dateStr = `${year}-${month}-${day}`;
       onDateClick(dateStr);
     }
   };
