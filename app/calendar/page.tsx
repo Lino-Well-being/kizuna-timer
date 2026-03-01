@@ -54,7 +54,7 @@ export default function CalendarPage() {
     setSelectedDate(date);
     const record = getRecordByDate(date);
     if (record && record.completed) {
-      const words = record.wordIds
+      const words = (record.wordIds || [])
         .map((id) => getWordById(id))
         .filter(Boolean);
       if (words.length > 0) {
@@ -94,7 +94,7 @@ export default function CalendarPage() {
       }
 
       // 単語
-      const words = record.wordIds
+      const words = (record.wordIds || [])
         .map((id) => {
           const word = getWordById(id);
           return word ? word.english : null;
@@ -238,8 +238,8 @@ export default function CalendarPage() {
                       else timeLabel = '夜';
                     }
 
-                    // 単語を取得
-                    const words = record.wordIds
+                    // 単語を取得（undefinedチェック）
+                    const words = (record.wordIds || [])
                       .map((id) => {
                         const word = getWordById(id);
                         return word ? word.english : null;

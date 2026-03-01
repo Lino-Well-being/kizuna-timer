@@ -29,7 +29,34 @@ function getLocalDateString(date: Date = new Date()): string {
 }
 
 /**
- * すべての実施記録を取得
+ * 古いデータ形式を新しい形式に変換
+ */
+function migrateOldRecord(record: any): SessionRecord {
+  // 古い形式の場合は変換
+  if ('wordId' in record && !('wordIds' in record)) {
+    return {
+      id: record.id || `${record.date}_${record.completedAt || new Date().toISOString()}`,
+      date: record.date,
+      wordIds: [record.wordId], // 単一IDを配列に変換
+      completed: record.completed,
+      completedAt: record.completedAt,
+      notes: record.notes,
+    };
+  }
+
+  // idがない場合は追加
+  if (!record.id) {
+    return {
+      ...record,
+      id: `${record.date}_${record.completedAt || new Date().toISOString()}`,
+    };
+  }
+
+  return record;
+}
+
+/**
+ * すべての実施記録を取得（自動的に古いデータを変換）
  */
 export function getAllRecords(): SessionRecord[] {
   if (typeof window === 'undefined') return [];
@@ -38,7 +65,20 @@ export function getAllRecords(): SessionRecord[] {
   if (!data) return [];
 
   try {
-    return JSON.parse(data);
+    const rawRecords = JSON.parse(data);
+    const migratedRecords = rawRecords.map(migrateOldRecord);
+
+    // 変換が必要だった場合は保存し直す
+    const needsMigration = rawRecords.some((r: any, i: number) =>
+      JSON.stringify(r) !== JSON.stringify(migratedRecords[i])
+    );
+
+    if (needsMigration) {
+      console.log('📝 古いデータ形式を新しい形式に変換しました');
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(migratedRecords));
+    }
+
+    return migratedRecords;
   } catch (error) {
     console.error('Failed to parse records:', error);
     return [];
