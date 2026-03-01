@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { playFanfare, playTick } from '@/lib/sound';
+import { playFanfare, playTick, initAudio } from '@/lib/sound';
 
 interface TimerProps {
   onComplete?: () => void;
@@ -43,6 +43,8 @@ export default function Timer({ onComplete, minutes = 10 }: TimerProps) {
   const displaySeconds = seconds % 60;
 
   const handleStart = () => {
+    // ブラウザの自動再生ポリシー対応：ユーザー操作でAudioContextを初期化
+    initAudio();
     setIsRunning(true);
   };
 
@@ -136,10 +138,7 @@ export default function Timer({ onComplete, minutes = 10 }: TimerProps) {
         <div className="animate-bounce text-center">
           <div className="text-4xl">🎉</div>
           <div className="mt-2 text-2xl font-bold text-purple-600">
-            よくできました！
-          </div>
-          <div className="mt-1 text-gray-600">
-            10分間、がんばりましたね！
+            よくがんばったね！
           </div>
         </div>
       )}

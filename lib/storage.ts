@@ -13,6 +13,16 @@ export interface SessionRecord {
 const STORAGE_KEY = 'kizuna-timer-records';
 
 /**
+ * ローカル時刻でYYYY-MM-DD形式の日付文字列を取得
+ */
+function getLocalDateString(date: Date = new Date()): string {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+}
+
+/**
  * すべての実施記録を取得
  */
 export function getAllRecords(): SessionRecord[] {
@@ -33,7 +43,7 @@ export function getAllRecords(): SessionRecord[] {
  * 今日の記録を取得
  */
 export function getTodayRecord(): SessionRecord | null {
-  const today = new Date().toISOString().split('T')[0];
+  const today = getLocalDateString();
   const records = getAllRecords();
   return records.find((r) => r.date === today) || null;
 }
@@ -68,7 +78,7 @@ export function saveRecord(record: SessionRecord): void {
  * 今日の記録を保存
  */
 export function saveTodayRecord(wordId: number, completed: boolean): void {
-  const today = new Date().toISOString().split('T')[0];
+  const today = getLocalDateString();
   const record: SessionRecord = {
     date: today,
     wordId,
@@ -93,7 +103,9 @@ export function calculateStreak(): number {
   today.setHours(0, 0, 0, 0);
 
   for (let i = 0; i < records.length; i++) {
-    const recordDate = new Date(records[i].date);
+    // YYYY-MM-DD文字列からローカル時刻のDateオブジェクトを作成
+    const [year, month, day] = records[i].date.split('-').map(Number);
+    const recordDate = new Date(year, month - 1, day);
     recordDate.setHours(0, 0, 0, 0);
 
     const expectedDate = new Date(today);

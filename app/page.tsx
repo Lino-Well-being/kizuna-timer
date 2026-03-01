@@ -87,18 +87,26 @@ export default function Home() {
         </Link>
 
         {/* ナビゲーション */}
-        <div className="flex w-full gap-4">
+        <div className="flex w-full flex-col gap-4">
+          <div className="flex gap-4">
+            <Link
+              href="/calendar"
+              className="flex-1 rounded-2xl bg-white px-6 py-4 text-center font-medium text-gray-700 shadow-md transition-all hover:bg-gray-50"
+            >
+              📅 カレンダー
+            </Link>
+            <Link
+              href="/recordings"
+              className="flex-1 rounded-2xl bg-white px-6 py-4 text-center font-medium text-gray-700 shadow-md transition-all hover:bg-gray-50"
+            >
+              🎤 録音リスト
+            </Link>
+          </div>
           <Link
-            href="/calendar"
-            className="flex-1 rounded-2xl bg-white px-6 py-4 text-center font-medium text-gray-700 shadow-md transition-all hover:bg-gray-50"
+            href="/words"
+            className="rounded-2xl bg-gradient-to-r from-purple-100 to-pink-100 px-6 py-4 text-center font-medium text-purple-700 shadow-md transition-all hover:shadow-lg"
           >
-            📅 カレンダー
-          </Link>
-          <Link
-            href="/recordings"
-            className="flex-1 rounded-2xl bg-white px-6 py-4 text-center font-medium text-gray-700 shadow-md transition-all hover:bg-gray-50"
-          >
-            🎤 録音リスト
+            📚 単語リスト (100単語)
           </Link>
         </div>
 

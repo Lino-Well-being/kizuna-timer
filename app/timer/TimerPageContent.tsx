@@ -82,8 +82,11 @@ export default function TimerPageContent() {
 
       {/* メインコンテンツ */}
       <main className="flex flex-1 flex-col items-center justify-center p-8">
+        {/* タイマー */}
+        <Timer minutes={minutes} onComplete={handleComplete} />
+
         {/* カテゴリー情報 */}
-        <div className="mb-4 text-center">
+        <div className="mb-4 mt-8 text-center">
           <div className="text-xl font-bold text-gray-700">
             今日の単語 {categoryInfo?.emoji || '📚'}
           </div>
@@ -149,9 +152,6 @@ export default function TimerPageContent() {
             </div>
           ))}
         </div>
-
-        {/* タイマー */}
-        <Timer minutes={minutes} onComplete={handleComplete} />
 
         {/* 録音セクション */}
         <div className="mt-8 w-full max-w-md rounded-3xl bg-white p-6 shadow-lg">
