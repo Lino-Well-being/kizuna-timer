@@ -86,7 +86,7 @@ export default function TimerPageContent() {
       {/* メインコンテンツ */}
       <main className="flex flex-1 flex-col items-center justify-center p-8">
         {/* タイマー */}
-        <Timer minutes={minutes} onComplete={handleComplete} />
+        <Timer minutes={minutes} onComplete={handleComplete} autoStart />
 
         {/* カテゴリー情報 */}
         <div className="mb-4 mt-8 text-center">

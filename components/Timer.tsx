@@ -1,61 +1,132 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { playFanfare, playTick, initAudio } from '@/lib/sound';
+import {
+  requestNotificationPermission,
+  registerServiceWorker,
+  scheduleTimerNotification,
+  cancelTimerNotification,
+} from '@/lib/notification';
 
 interface TimerProps {
   onComplete?: () => void;
   minutes?: number; // タイマーの分数（デフォルト10分）
+  autoStart?: boolean; // 自動スタート
 }
 
-export default function Timer({ onComplete, minutes = 10 }: TimerProps) {
+export default function Timer({ onComplete, minutes = 10, autoStart = false }: TimerProps) {
   const TOTAL_SECONDS = minutes * 60;
   const [seconds, setSeconds] = useState(TOTAL_SECONDS);
   const [isRunning, setIsRunning] = useState(false);
   const [isCompleted, setIsCompleted] = useState(false);
 
+  // 絶対時刻ベース：終了時刻を保持
+  const endTimeRef = useRef<number | null>(null);
+  const onCompleteRef = useRef(onComplete);
+  onCompleteRef.current = onComplete;
+  const handleStartRef = useRef<() => void>(() => {});
+
+  // Service Worker を初期化 & autoStart
+  useEffect(() => {
+    registerServiceWorker();
+    if (autoStart) {
+      handleStartRef.current();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // 残り時間を計算するヘルパー
+  const calcRemaining = useCallback(() => {
+    if (!endTimeRef.current) return 0;
+    return Math.max(0, Math.ceil((endTimeRef.current - Date.now()) / 1000));
+  }, []);
+
+  // タイマー完了処理
+  const completeTimer = useCallback(() => {
+    setIsRunning(false);
+    setIsCompleted(true);
+    setSeconds(0);
+    endTimeRef.current = null;
+    playFanfare();
+    onCompleteRef.current?.();
+  }, []);
+
+  // メインのタイマーループ（絶対時刻ベース）
   useEffect(() => {
     if (!isRunning || isCompleted) return;
 
     const interval = setInterval(() => {
-      setSeconds((prev) => {
-        // 最後の3秒でカウントダウン音を再生
-        if (prev <= 3 && prev > 1) {
-          playTick();
-        }
+      const remaining = calcRemaining();
 
-        if (prev <= 1) {
-          setIsRunning(false);
-          setIsCompleted(true);
-          // ファンファーレを再生
-          playFanfare();
-          onComplete?.();
-          return 0;
-        }
-        return prev - 1;
-      });
-    }, 1000);
+      if (remaining <= 3 && remaining > 0) {
+        playTick();
+      }
+
+      if (remaining <= 0) {
+        completeTimer();
+        return;
+      }
+
+      setSeconds(remaining);
+    }, 250); // 250msで更新（バックグラウンド復帰時にすぐ反映）
 
     return () => clearInterval(interval);
-  }, [isRunning, isCompleted, onComplete]);
+  }, [isRunning, isCompleted, calcRemaining, completeTimer]);
+
+  // visibilitychange：画面復帰時に即座に残り時間を再計算
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (document.visibilityState !== 'visible') return;
+      if (!isRunning || !endTimeRef.current) return;
+
+      const remaining = calcRemaining();
+      if (remaining <= 0) {
+        completeTimer();
+      } else {
+        setSeconds(remaining);
+      }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    return () => document.removeEventListener('visibilitychange', handleVisibilityChange);
+  }, [isRunning, calcRemaining, completeTimer]);
 
   const displayMinutes = Math.floor(seconds / 60);
   const displaySeconds = seconds % 60;
 
-  const handleStart = () => {
-    // ブラウザの自動再生ポリシー対応：ユーザー操作でAudioContextを初期化
+  const handleStart = async () => {
     initAudio();
+
+    // 通知許可リクエスト
+    await requestNotificationPermission();
+
+    // 終了時刻を設定
+    endTimeRef.current = Date.now() + seconds * 1000;
     setIsRunning(true);
+
+    // Service Worker にタイマー通知をスケジュール
+    scheduleTimerNotification(seconds);
   };
+  handleStartRef.current = handleStart;
 
   const handlePause = () => {
+    // 残り秒数を確定して保存
+    const remaining = calcRemaining();
+    setSeconds(remaining);
+    endTimeRef.current = null;
     setIsRunning(false);
+
+    cancelTimerNotification();
   };
 
   const handleReset = () => {
     setIsRunning(false);
     setIsCompleted(false);
     setSeconds(TOTAL_SECONDS);
+    endTimeRef.current = null;
+
+    cancelTimerNotification();
   };
 
   // キャラクターの状態を決定
