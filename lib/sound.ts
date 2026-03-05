@@ -170,6 +170,37 @@ export function playSuccess(): void {
 }
 
 /**
+ * 残り1分アラーム（ピピッと軽い2音）
+ */
+export function playAlert(): void {
+  const ctx = getAudioContext();
+  if (!ctx) return;
+
+  try {
+    const beeps = [0, 0.12]; // 2回鳴らす間隔
+    beeps.forEach((delay) => {
+      const oscillator = ctx.createOscillator();
+      const gainNode = ctx.createGain();
+
+      oscillator.connect(gainNode);
+      gainNode.connect(ctx.destination);
+
+      oscillator.type = 'sine';
+      oscillator.frequency.value = 1200; // 高めの軽い音
+
+      const t = ctx.currentTime + delay;
+      gainNode.gain.setValueAtTime(0.3, t);
+      gainNode.gain.exponentialRampToValueAtTime(0.01, t + 0.08);
+
+      oscillator.start(t);
+      oscillator.stop(t + 0.08);
+    });
+  } catch (error) {
+    console.error('❌ Failed to play alert:', error);
+  }
+}
+
+/**
  * カウントダウン音を再生（タイマーの最後の3秒）
  */
 export function playTick(): void {

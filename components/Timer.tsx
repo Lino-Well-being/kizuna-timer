@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef, useCallback } from 'react';
-import { playFanfare, playTick, initAudio } from '@/lib/sound';
+import { playFanfare, playTick, playAlert, initAudio } from '@/lib/sound';
 import {
   requestNotificationPermission,
   registerServiceWorker,
@@ -26,6 +26,7 @@ export default function Timer({ onComplete, minutes = 10, autoStart = false }: T
   const onCompleteRef = useRef(onComplete);
   onCompleteRef.current = onComplete;
   const handleStartRef = useRef<() => void>(() => {});
+  const alertPlayedRef = useRef(false);
 
   // Service Worker を初期化 & autoStart
   useEffect(() => {
@@ -58,6 +59,12 @@ export default function Timer({ onComplete, minutes = 10, autoStart = false }: T
 
     const interval = setInterval(() => {
       const remaining = calcRemaining();
+
+      // 残り1分でピピッとアラーム（1回だけ）
+      if (remaining <= 60 && !alertPlayedRef.current) {
+        alertPlayedRef.current = true;
+        playAlert();
+      }
 
       if (remaining <= 3 && remaining > 0) {
         playTick();
@@ -125,6 +132,7 @@ export default function Timer({ onComplete, minutes = 10, autoStart = false }: T
     setIsCompleted(false);
     setSeconds(TOTAL_SECONDS);
     endTimeRef.current = null;
+    alertPlayedRef.current = false;
 
     cancelTimerNotification();
   };
